@@ -1,6 +1,6 @@
 import {CDN_LOGO} from "../util/constant" 
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
  const Header = () => {
   const [loginBtn,setLoginBtn]=useState('login');
     return (
@@ -10,9 +10,9 @@ import { useState } from "react";
         </div>
         <div>
         <ul type="none" className="ul-container">
-                <li>Home</li>
-                <li>About-us</li>
-                <li>Contact</li>
+                <li><Link className="link">Home</Link></li>
+                <li><Link className="link" to="/about">About-us</Link></li>
+                <li><Link className="link" to="/contact">Contact-us</Link></li>
                 <li>Cart</li>
                 <li>
                   <button onClick={()=>{

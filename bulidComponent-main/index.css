@@ -11,6 +11,9 @@
 .ul-container{
     display: flex;
 }
+.link{
+    text-decoration: none;
+}
 .ul-container>li{
     margin-inline: 20px;
     font-family: sans-serif;
@@ -72,9 +75,18 @@
 }
 .shimmer-item{
     display: flex;
-    flex-wrap: wrap;
-    
-    
+    flex-wrap: wrap;   
+}
+.shimmer-two{
+    margin-inline: 340px ;
+}
+.shimmer-item-2{
+    padding: 30px;
+}
+.inner-div-1{
+    width: 1000px;
+    height: 350px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .inner-div{
     width: 290;
@@ -89,4 +101,47 @@
     background-color: #fff;
     border-radius: 6px;
     cursor: pointer;
+}
+/* catError */
+.errorImg{
+    width: 400px;
+}
+.res-menu{
+    /* border: 2px solid black;
+    margin: 2px; */
+    display: grid;
+
+    
+
+
+
+    margin-inline: 340px;
+}
+.res-menu>div{
+    /* border: 2px solid black;  */
+    font-family: Gilroy_Bold;
+    font-size: x-large;
+    margin: 5px;
+    /* height: 300px; */
+    padding: 10px;
+    text-decoration: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.img-res{
+    width: 200px;
+    position: relative;
+    left: 700;
+}
+.res-heading-name{
+    text-align: center;
+}
+.user-card{
+    border: 1px solid black;
+    padding: 10px;
+}
+.about-card{
+    border: 2px solid black;
+    text-align: center;
+ 
 }
