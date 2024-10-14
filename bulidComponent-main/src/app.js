@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import { createBrowserRouter, RouterProvider,outlet, Outlet } from "react-router-dom"
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
 
 import Error from "./component/Error"
 import Header from "./component/Header"
@@ -9,7 +9,6 @@ import About from "./component/About"
 import Contact from "./component/Contact"
 import Error from "./component/Error"
 import RestaurantMenu from "./component/RestaurantMenu"
-
 
 const App=()=>{
     return (
