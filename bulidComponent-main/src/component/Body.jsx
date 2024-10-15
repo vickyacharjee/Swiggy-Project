@@ -3,6 +3,8 @@ import { resList,Sea } from "../util/constant";
 import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
+import useOnlineStatus from "../util/useOnlineStatus";
+
 
 const Body=()=>{
     const [listRestaurants,setListRestaurants]=useState([]); // this for restaurant list
@@ -19,11 +21,17 @@ const Body=()=>{
     const fetchData= async()=>{
         const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9127021&lng=77.5621287&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json= await data.json();
-        // console.log(json);
-        const res=json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants;
+        console.log(json);
+        const res=json?.data?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
         setListRestaurants(res); 
         setFilterRestaurant(res);
         setTest(res);
+    }
+    const onlineStatus=useOnlineStatus();
+    if (onlineStatus===false) {
+        return(
+            <h1>offline</h1>
+        )
     }
     
     if (listRestaurants.length==0) {

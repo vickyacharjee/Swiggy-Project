@@ -22,7 +22,7 @@ const RestaurantMenu=()=>{
                                                 {item?.card?.info?.name}
                                             Rs -{item?.card?.info?.price/100}   
                                                 <div>
-                                                     <img className="img-res" width={40} src={CDN_restaurant_image_url+item?.card?.info?.imageId} alt="Swiggy Logo" />
+                                                     <img className="img-res" width={40} src={CDN_restaurant_image_url+item?.card?.info?.imageId} alt="N/A" />
                                                 </div>
                                           </div>)}
                 </div>
